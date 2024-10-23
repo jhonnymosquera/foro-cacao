@@ -23,9 +23,20 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Establecer directorio de trabajo
 WORKDIR /var/www/html
 
+# Copiar composer.json y composer.lock
+COPY composer.json composer.lock ./
+
+# Instalar dependencias
+RUN composer install --no-scripts --no-autoloader
+
+# Copiar el resto de la aplicación
+COPY . .
+
+# Generar autoloader optimizado
+RUN composer dump-autoload --optimize
+
 # Exponer puerto para el servidor de desarrollo de Laravel
 EXPOSE 7000
 
 # Comando para iniciar el servidor de desarrollo de Laravel
 CMD php artisan serve --host=0.0.0.0 --port=7000
-
