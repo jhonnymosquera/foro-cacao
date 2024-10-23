@@ -6,7 +6,7 @@
 
     <script src="{{ asset('js/resultados.js') }}"></script>
     <script>
-        setInterval(() => actualizarResultados("{{ route('resultados.eventos') }}"), 1000);
-        actualizarResultados("{{ route('resultados.eventos') }}");
+        setInterval(() => actualizarResultados("https://forocacao.adso.com.co/resultados/eventos"), 1000);
+        actualizarResultados("https://forocacao.adso.com.co/resultados/eventos");
     </script>
 </x-layout>
