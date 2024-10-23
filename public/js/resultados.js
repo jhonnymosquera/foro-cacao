@@ -37,7 +37,7 @@ function actualizarResultados(url) {
                         equipoElement.className = 'equipo';
                         equipoElement.innerHTML = `
                             <div class="equipo-barra" style="width: ${porcentaje}%;"></div>
-                            <span class="equipo-nombre">Equipos ${equipo.equipo_id}</span>
+                            <span class="equipo-nombre">${equipo.equipo_nombre}</span>
                             <span class="equipo-tiempo">Tiempo: ${equipo.tiempo}</span>
                         `;
                         eventoElement.appendChild(equipoElement);
