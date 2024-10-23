@@ -35,6 +35,8 @@ COPY . .
 # Generar autoloader optimizado
 RUN composer dump-autoload --optimize
 
+RUN chown -R www-data:www-data vendor/
+
 # Exponer puerto para el servidor de desarrollo de Laravel
 EXPOSE 7000
 
