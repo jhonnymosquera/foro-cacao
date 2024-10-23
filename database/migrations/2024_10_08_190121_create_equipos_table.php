@@ -18,9 +18,11 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        for ($i = 1; $i <= 12; $i++) {
+        $equipos = ["Asoprodespla", "Asoagricac", "ASOCOPROCADA", "ASOCOPROCADA - 2", "CAOCARES", "ACEFUVER", "ASOCPRAUR", "ASOCPRAUR - 2", "ASOPRONE", "TULANTIOQUIA", "NN", "NN"];
+
+        foreach ($equipos as $equ) {
             $equipo = new Equipos();
-            $equipo->equ_nombre = "Equipos " . $i;
+            $equipo->equ_nombre = $equ;
             $equipo->save();
         }
     }
