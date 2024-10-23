@@ -49,7 +49,7 @@
                             <div class="col-1">
                                 @if ($registrado)
                                     <input class="form-control" type="number" name="minutos"
-                                        value="{{ $p->par_minutos }}" min="0" max="59" readonly>
+                                        value="{{ $p->par_minutos }}" min="0" max="59">
                                 @else
                                     <input class="form-control" type="number" name="minutos"
                                         value="{{ $p->par_minutos }}" min="0" max="59">
@@ -61,7 +61,7 @@
                             <div class="col-1">
                                 @if ($registrado)
                                     <input class="form-control" type="number" name="segundos"
-                                        value="{{ $p->par_segundos }}" min="0" max="59" readonly>
+                                        value="{{ $p->par_segundos }}" min="0" max="59">
                                 @else
                                     <input class="form-control" type="number" name="segundos"
                                         value="{{ $p->par_segundos }}" min="0" max="59">
@@ -71,8 +71,7 @@
 
                         <td>
                             @if ($registrado)
-                                <button class="btn btn-success" disabled>
-                                    <i class="bi bi-check-circle"></i>
+                                <i class="bi bi-check-circle"></i>
                                 </button>
                             @else
                                 <button class="btn btn-danger">
