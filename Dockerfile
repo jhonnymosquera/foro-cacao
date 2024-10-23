@@ -24,8 +24,8 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 WORKDIR /var/www/html
 
 # Exponer puerto para el servidor de desarrollo de Laravel
-EXPOSE 8000
+EXPOSE 7000
 
 # Comando para iniciar el servidor de desarrollo de Laravel
-CMD php artisan serve --host=0.0.0.0 --port=8000
+CMD php artisan serve --host=0.0.0.0 --port=7000
 
